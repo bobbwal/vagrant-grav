@@ -8,6 +8,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "files/scripts/setup.sh"
   config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
 
+  # Uncomment the following line and change the first path to the path of your
+  # development theme
+  # config.vm.synced_folder "/home/example/development/my-grav-theme", "/vagrant/grav-admin/user/themes/example", :owner => "www-data"
+
   # setup virtual hostname and provision local IP
   config.vm.hostname = "grav.dev"
   config.vm.network :private_network, :ip => "192.168.33.10"
