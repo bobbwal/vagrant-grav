@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
 
   # allows running commands globally in shell for installed composer libraries
   config.vm.provision :shell, path: "files/scripts/setup.sh"
+  config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
 
   # setup virtual hostname and provision local IP
   config.vm.hostname = "grav.dev"
