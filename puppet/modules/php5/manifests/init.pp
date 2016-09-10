@@ -8,7 +8,7 @@ class php5::install {
       'php5-gd',
       'php5-cli',
       'php5-curl',
-      'php5-acpu',
+      'php5-apcu',
       'php5-xdebug',
       'libyaml-dev'
     ]:
