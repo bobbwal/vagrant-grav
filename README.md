@@ -10,7 +10,6 @@ provide a lightweight Vagrant box for developing with
 - Ubuntu Trusty 14.04
 - Grav 1.1.3, including admin plugin
 - PHP 5, including performance optimizations for Grav
-- Composer
 
 ## Prerequisites
 

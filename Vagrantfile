@@ -4,8 +4,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
 
-  # allows running commands globally in shell for installed composer libraries
-  config.vm.provision :shell, path: "files/scripts/setup.sh"
   config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
 
   # Uncomment the following line and change the first path to the path of your
