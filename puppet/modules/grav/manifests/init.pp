@@ -3,9 +3,9 @@
 class grav::install {
 
   exec { 'download-grav':
-    command => '/usr/bin/wget https://github.com/getgrav/grav/releases/download/1.1.3/grav-admin-v1.1.3.zip',
+    command => '/usr/bin/wget https://github.com/getgrav/grav/releases/download/1.1.15/grav-admin-v1.1.15.zip',
     cwd     => '/vagrant/',
-    creates => '/vagrant/grav-admin-v1.1.3.zip'
+    creates => '/vagrant/grav-admin-v1.1.15.zip'
   }
 
   package { 'unzip':
@@ -16,7 +16,7 @@ class grav::install {
   exec { 'unzip-grav':
     cwd     => '/vagrant/',
     user    => 'root',
-    command => '/usr/bin/unzip /vagrant/grav-admin-v1.1.3.zip',
+    command => '/usr/bin/unzip /vagrant/grav-admin-v1.1.15.zip',
     require => Exec['download-grav'],
     creates => '/vagrant/grav-admin',
   }
