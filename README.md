@@ -8,7 +8,7 @@ provide a lightweight Vagrant box for developing with
 ## What do I get?
 
 - Ubuntu Trusty 14.04
-- Grav 1.1.3, including admin plugin
+- Grav 1.1.15, including admin plugin
 - PHP 5, including performance optimizations for Grav
 
 ## Prerequisites
