@@ -7,9 +7,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
 
-
-  #config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
-  config.vm.synced_folder ".", "/vagrant", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+  config.vm.synced_folder ".", "/vagrant", :nfs => true
 
   # Uncomment the following line and change the first path to the path of your
   # development theme
@@ -17,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   # setup virtual hostname and provision local IP
   config.vm.hostname = "grav.dev"
-  config.vm.network :private_network, :ip => "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
   config.hostsupdater.aliases = %w{www.grav.dev}
   config.hostsupdater.remove_on_suspend = true
 
