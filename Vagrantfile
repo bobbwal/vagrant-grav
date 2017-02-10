@@ -1,10 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# for windows install winnfsd
+# $ vagrant plugin install vagrant-winnfsd
+
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
 
-  config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
+
+  #config.vm.synced_folder ".", "/vagrant", :owner => "www-data"
+  config.vm.synced_folder ".", "/vagrant", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
   # Uncomment the following line and change the first path to the path of your
   # development theme
